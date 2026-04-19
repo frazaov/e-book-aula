@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build-sass",
+        "type": "shell",
+        "command": "sass",
+        "args": [
+          "'${file}'", // caminho do seu arquivo SASS
+          "'${fileDirname}/${fileBasenameNoExtension}.css'",  // caminho do arquivo CSS de saída
+          "--watch", // Para precisar acionar o comando apenas uma vez
+          "--style=compressed", // Elimina todas as quebras de linha e deixa o arquivo menor
+          // "--quiet" // Para de avisar sobre futuras obsolescências
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      }
+    ]
+  }
+  

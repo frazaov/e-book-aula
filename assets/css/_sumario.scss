@@ -1,0 +1,117 @@
+@use "defaults" as *;
+@use 'sass:color';
+
+
+#header-sumario{
+    background-color: $cor-destaque-claro;
+    color: $cor-destaque-escuro;
+    padding-block: 2em;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+
+    h1{
+        font-weight: 300;
+        font-size: 3em;
+        @media screen and (max-width: $smartphone) {
+            font-size: 1.8em;
+            font-weight: 500;
+        }
+
+    }
+
+    h2{
+        font-size: 1em;
+        font-weight: 600;
+        text-align: right;
+        span{
+            display: block;
+            font-weight: 400;
+        }
+    }
+}
+
+#main-sumario{
+    padding-block: 4em;
+    a{
+        text-decoration: none;
+        color: $cor-destaque-escuro;
+        transition: all 0.1s linear;
+        transition-property: color, background-color;
+        display: block;
+        padding-inline: 1rem;
+
+        &:hover{
+            color: $cor-destaque-claro;
+            background-color: $cor-destaque;
+        }
+    }
+
+    .capa-e-pdf{
+        display: flex;
+        margin-bottom: 2em;
+        a{
+            font-size: 1em;
+            font-weight: 500;
+            display: inline-block;
+            padding-block: .5em;
+            // border: 1px solid;
+        }
+        @media screen and (max-width: $smartphone) {
+            flex-direction: column;
+            gap: 1em;
+        }
+
+    }
+
+
+    ul{
+        list-style: none;
+        padding-left: 0;
+        li{
+            a{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-block: 1.5em;
+                padding-inline: 1rem;
+                
+
+                .titulo-capitulo{
+                    span{
+                        display: block;
+                        &:first-child, *:only-child{
+                            font-size: 1.4em;
+                            font-weight: 500;
+                            line-height: 1.2;
+                            margin-bottom: 0.5rem;
+                        }
+                        &:nth-child(2){
+                            font-size: 1em;
+                            font-weight: 350;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+
+                .folio{
+                    font-weight: 400;
+                    font-size: 1.2em;
+                }
+            }
+
+            @media screen {
+                &:nth-child(odd){
+                    a{
+                        background-color: $cor-fundo-netro;
+                        &:hover{
+                            background-color: $cor-destaque;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

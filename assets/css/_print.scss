@@ -1,0 +1,297 @@
+@use "defaults" as *;
+@use 'sass:math';
+@use 'sass:color';
+
+@media print {
+    
+    $cor-texto-padrao: hsl(0, 0%, 25%);
+    $cor-fundo-padrao: transparent;
+
+
+    body {
+        font-size: 10pt;
+        color: $cor-texto-padrao;
+        background-color: $cor-fundo-padrao;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    #capa-ebook {
+        min-height: 0;
+        height: 100vh;
+        background-color: transparent;
+
+        .titulo-ebook {
+            color: inherit;
+        }
+
+        .autoria-capa {
+            color: inherit;
+            margin-bottom: 0;
+        }
+
+        .botoes-capa {
+            display: none;
+        }
+    }
+
+    #main-pretextuais {
+        .ficha-tecnica {
+            h2 {
+                color: inherit;
+            }
+
+            dl {
+                dt {
+                    color: inherit;
+                }
+            }
+        }
+
+        hr {
+            background-color: $cor-texto-padrao;
+        }
+
+        .ficha-catalog {
+            width: 8cm;
+        }
+
+        .botoes-fim-capa {
+            display: none;
+        }
+    }
+
+    #rodape-capa{
+        background-color: transparent;
+        color: inherit;
+    }
+
+    #header-sumario{
+        background-color: transparent;
+        color: inherit;
+        border-bottom: 1px solid;
+    }
+
+    #main-sumario{
+        a{
+            color: inherit;
+            background-color: transparent;
+        }
+
+        .capa-e-pdf{
+            display: none;
+        }
+
+        ul{
+            li{
+                a{
+                    padding-block: 1em;
+                }
+            }
+        }
+    }
+
+    #header-titulo-livro{
+        display: none;
+    }
+
+    #titulo-capitulo{
+        display: none;
+        background-color: transparent;
+        border-bottom: 1px solid;
+        padding-block-end: 0px;
+        h1{
+            color: inherit;
+            font-size: 1em;
+        }
+
+        .mini-menu, .progresso{
+            display: none;
+        }
+    }
+
+    #main-miolo{
+        margin-top: 2em;
+        text-align: justify;
+        orphans: 4;
+        widows: 4;
+        article{
+            grid-template-columns: 0 2fr 1fr 0;
+            gap: 1rem 0rem;
+            padding-bottom: 0;
+            margin-bottom: 8em;
+
+            & >{
+                aside, .lateral{
+                    // margin-left: .5cm;
+                }
+                aside{
+                    border-color: $cor-texto-padrao;
+                }
+
+                .subgrid{
+                    display: grid;
+                    grid-template-columns: subgrid;
+                    // grid-template-rows: subgrid;
+                    gap: 1rem 0rem;
+                }
+
+                blockquote{
+                    @extend .subgrid;
+                }
+    
+                p.folio{
+                    border-top-color: color.adjust($cor-texto-padrao, $alpha: -.5);
+                    color: $cor-texto-padrao;
+                    position: static;
+                    &:first-child{
+                        margin-bottom: 1rem;
+                        border-top: none;
+                    }
+                    span{
+                        background-color: transparent;
+                    }
+                }
+    
+                
+            }
+    
+            h1{
+                color: inherit;
+            }
+            
+            blockquote, ul, ol, aside{
+                p{
+                    text-indent: 0;
+                }
+            }
+        }
+
+        button.botao-nota{
+            padding: 0;
+            font-weight: 700;
+            background-color: transparent;
+            color: inherit;
+            border-radius: 0;
+            border: none;
+        }
+
+        p{
+            text-indent: 2em;
+        }
+
+        h2,h3,h4{
+            color: inherit;
+        }
+        h2,h3,h4,h5,h6{
+            break-after: avoid;
+        }
+
+        a{
+            color: blue;
+            &:not(.text-is-url){
+                &:after{
+                    content: " (" attr(href) ")";
+                    overflow-wrap: anywhere;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                }
+            }
+        }
+
+        
+        iframe[src*="youtube"] {
+            display: none;
+        }
+
+        .alt-iframe{
+            border: 1px dotted grey;
+            padding: 1rem;
+        }
+
+        ul, ol{
+            & > li{
+                &::marker{
+                    color: inherit;
+                }
+            }
+        }
+        .container-table{
+            overflow: visible;
+        }
+
+        table{
+            border-color: currentColor;
+            thead{
+                th{
+                    background-color: $cor-texto-padrao;
+                    color: white;
+                }
+            }
+            tbody{
+                tr{
+                    border-bottom-color: currentColor;
+                }
+            }
+        }
+    }
+
+    #rodape-miolo{
+        display: none;
+    }
+
+    .heading-notas{
+        color: inherit;
+        margin-bottom: 1.5em;
+    }
+
+    #notas-rodape{
+        width: 100%;
+        max-width: 100%;
+        position: static;
+        opacity: 1;
+        display: block;
+
+        .fechar-nota{
+            display: none;
+        }
+
+        .notas{
+            font-size: 1em;
+            background-color: transparent;
+            border: none;
+            border-radius: none;
+            padding: 0;
+
+            p{
+                text-indent: 0;
+            }
+
+            & > div{
+                padding-block: 1em;
+                .n-nota{
+                    float: left;
+                    width: auto;
+                    min-width: 0;
+                    height: auto;
+                    padding: 0;
+                    vertical-align: super;
+                    font-size: .9em;
+                    font-weight: bold;
+                    border: none;
+                    margin-right: 1ch;
+                }
+
+                &:not(:last-child){
+                    border-bottom: 1px dotted grey;
+                }
+            }
+        }
+    }
+
+    .regua-apoio{
+        display: none;
+    }
+}

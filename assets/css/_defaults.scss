@@ -1,0 +1,93 @@
+//Cores do projeto
+$vermelho: #ed6a5aff;
+$amarelo-clarim: #f4f1bbff;
+$turquesa-claro: #9bc1bcff;
+$azul-ceu: #0c78a3;
+$azul-apagado: #5d576bff;
+$cinzento: rgb(245, 245, 245);
+$quasebranco: rgb(248, 253, 253);
+$preto-roxeado: #1C1725;
+
+$cor-fundo-padrao: $quasebranco;
+$cor-texto-padrao: $preto-roxeado;
+$cor-destaque-escuro: $azul-apagado;
+$cor-destaque: $vermelho;
+$cor-destaque-claro: $amarelo-clarim;
+$cor-links: $azul-ceu;
+$cor-fundo-netro: $cinzento;
+
+
+
+$container: 1020px;
+$tablet: 840px;
+$smartphone: 600px;
+$small: 450px;
+
+$fonte: "IBM Plex Sans", sans-serif;
+
+:root{
+    interpolate-size: allow-keywords;
+    
+    --inline-size-container: #{$container};
+    @media screen and (max-width: $container) {
+        --inline-size-container: #{$tablet};
+    }
+    @media screen and (max-width: $tablet) {
+        --inline-size-container: #{$smartphone};
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: $fonte;
+    background-color: $cor-fundo-padrao;
+    color: $cor-texto-padrao;
+    scroll-behavior: smooth;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 17px;
+    }
+    @media screen and (max-width: 600px) {
+        font-size: 16px;
+    }
+}
+
+.container{
+    width: var(--inline-size-container);
+    margin-inline: auto;
+    max-width: 100%;
+    @media screen and (max-width: $smartphone) {
+        padding-inline: 1rem;
+
+    }
+
+}
+
+button, .button{
+    display: inline-block;
+    line-height: 1.1;
+    background-color: $cor-destaque-escuro;
+    color: $cor-destaque-claro;
+    padding: 1em 1.5em;
+    border-radius: .25em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    transition-property: background-color, color;
+    font-weight: 500;
+    &:hover{
+        color: $cor-destaque;
+    }
+}
+
+
+h1,h2,h3,h4{
+    text-wrap: pretty;
+}
+
+

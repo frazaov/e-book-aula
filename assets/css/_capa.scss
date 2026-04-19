@@ -1,0 +1,196 @@
+@use "defaults" as *;
+
+#capa-ebook{
+    min-height: calc(100vh - 4em);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $cor-destaque-escuro;
+    padding-block: 4em 8em;
+    position: relative;
+
+    @media screen and (max-width: $smartphone) {
+        min-height: calc(100svh - 2em);
+        padding-block: 2em 5em;
+    }
+
+    .titulo-ebook{
+        color: $cor-destaque-claro;
+
+        font-weight: 500;
+        text-align: center;
+        font-size: 5em;
+        margin-bottom: 3rem;
+        span{
+            margin-top: 1rem;
+            display: block;
+            font-size: .75em;
+            font-weight: 300;
+        }
+
+        @media screen and (max-width: $tablet) {
+            font-size: 3.5em;
+        }
+        @media screen and (max-width: $smartphone) {
+            font-size: 2.5em;
+        }
+    }
+
+    .autoria-capa{
+        text-align: center;
+        font-size: 1.25em;
+        color: $cor-destaque-claro;
+        margin-bottom: 3rem;
+
+
+        dt{
+            font-weight: 700;
+        }
+        
+        dd{
+            font-weight: 400;
+            ul{
+                padding-left: 0;
+                list-style: none;
+            }
+        }
+
+        @media screen and (max-width: $smartphone) {
+            font-size: 1em;
+        }
+
+    }
+
+    .botoes-capa{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        @media screen and (max-width: $smartphone) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+        }
+        a{
+            background-color: $cor-destaque-claro;
+            color: $cor-destaque-escuro;
+            &:hover{
+                background-color: $cor-destaque;
+            }
+        }
+    }
+
+    .selo-editora{
+        position: absolute;
+        inset: auto 0 2em;
+        text-align: center;
+        img{
+            display: inline-block;
+            height: 1.5em;
+        }
+    }
+}
+
+
+#main-pretextuais{
+    padding-block: 6em;
+
+    .texto-copyright{
+        text-align: center;
+        margin-bottom: 2em;
+        @media screen and (max-width: $smartphone) {
+            margin-bottom: 4em;
+        }
+
+    }
+
+    .copyright-cc{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 4em;
+        img{
+            height: 4em;
+        }
+        @media screen and (max-width: $smartphone) {
+            flex-direction: column;
+        }
+
+    }
+
+    .ficha-tecnica{
+        columns: 2;
+        column-gap: 2em;
+        @media screen and (max-width: $smartphone) {
+            columns: 1;
+        }
+
+        h2{
+            font-weight: 500;
+            color: $cor-destaque;
+            break-after: avoid-column;
+            margin-bottom: 1rem;
+        }
+        dl{
+            break-inside: avoid;
+            & + h2{
+                margin-top: 1.8em;
+            }
+
+            dt{
+                font-weight: 600;
+                color: $cor-destaque-escuro;
+            }
+
+            dd{
+                & + dt{
+                    margin-top: 1.2em;
+                }
+                ul{
+                    padding-left: 0;
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    hr{
+        margin-block: 3em;
+        border-width: 0;
+        border-color: transparent;
+        border-style: solid;
+        height: .25em;
+        background-color: $cor-destaque-escuro;
+    }
+
+    .ficha-catalog{
+        margin-inline: auto;
+        width: 600px;
+        max-width: 100%;
+        margin-bottom: 4em;
+    }
+
+    .botoes-fim-capa{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        @media screen and (max-width: $smartphone) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+        }
+    }
+}
+
+#rodape-capa{
+    background-color: $cor-destaque-escuro;
+    color: $cor-destaque-claro;
+    text-align: center;
+    padding-block: 2em;
+    .container{
+        p + p{
+            margin-top: 1em;
+        }
+    }
+}
