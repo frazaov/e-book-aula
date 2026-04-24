@@ -119,11 +119,13 @@
     }
 
     .ficha-tecnica{
-        columns: 2;
-        column-gap: 2em;
-        @media screen and (max-width: $smartphone) {
-            columns: 1;
-        }
+        columns: 1;
+        //column-gap: 2em;
+        text-align: center;
+        margin: 140px 0px;
+        ///@media screen and (max-width: $smartphone) {
+       ///     columns: 1;
+       // }
 
         h2{
             font-weight: 500;

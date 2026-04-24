@@ -293,6 +293,24 @@
                 font-size: .6em;
             }
 
+            .quadro {
+                font-size: .9em;
+                line-height: 1.4;
+                border: 1px solid $cor-destaque-escuro;
+                padding: 1.5rem;
+                border-radius: .5rem;
+
+                h4 { font-weight: 400;
+                    margin-bottom: 1.5em;
+                }
+
+                p {
+                    &:not(:last-child) {
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+
 
 
             // DEBUGGING 
