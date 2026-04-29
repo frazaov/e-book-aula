@@ -300,16 +300,33 @@
                 padding: 1.5rem;
                 border-radius: .5rem;
 
-                h4 { font-weight: 400;
-                    margin-bottom: 1.5em;
-                }
-
-                p {
+                p, h1, h2, h3, h4, h5, h6 {
                     &:not(:last-child) {
                         margin-bottom: 1em;
                     }
                 }
             }
+
+             h4 { font-weight: 400;
+                    margin-bottom: 1.5em;
+                }
+
+
+             .quadro2 {  display: inline-block;
+                    background-color: $cor-destaque;
+                padding: 1.5rem;
+                border-radius: .5rem;
+
+                h2 {
+                    color: $cor-fundo-netro;
+                }
+
+                p, h1, h2, h3, h4, h5, h6 {
+                    &:not(:last-child) {
+                        margin-bottom: 1em;
+                    }
+                }
+                }
 
 
 
