@@ -9,13 +9,14 @@
 }
 
 #header-titulo-livro {
-    background-color: $cor-destaque-claro;
+    background-color: $cor-destaque-escuro;
     padding-block: .5em;
-    color: $cor-destaque-escuro;
+    color: $turquesa-claro;
 
     h2 {
         font-size: 1em;
         font-weight: 700;
+        color: $turquesa-claro;
 
         span {
             display: block;
@@ -89,7 +90,7 @@
     }
 
     h1 {
-        color: $cor-destaque-claro;
+        color: $quasebranco;
         font-size: 1.25em;
         white-space: nowrap;
         overflow: hidden;
@@ -122,7 +123,7 @@
         inset: auto auto 0 0;
         width: 0%;
         height: 3px;
-        background-color: $cor-destaque;
+        background-color: $amarelo-clarim;
         opacity: 1;
         // transition: opacity 0.2s linear;
     }
@@ -318,7 +319,7 @@
                 border-radius: .5rem;
 
                 h2 {
-                    color: $cor-fundo-netro;
+                    color: $cor-fundo-neutro;
                 }
 
                 p, h1, h2, h3, h4, h5, h6 {
@@ -385,13 +386,13 @@
         border: 1px solid transparent;
 
         &:hover {
-            // background-color: $cor-fundo-netro;
+            // background-color: $cor-fundo-neutro;
             color: $cor-destaque;
             // color: $;
         }
 
         &.clicado {
-            background-color: $cor-fundo-netro;
+            background-color: $cor-fundo-neutro;
             color: $cor-texto-padrao;
             border: 1px solid;
         }
@@ -399,7 +400,7 @@
 
     h2 {
         font-size: 1.75em;
-        color: $cor-destaque;
+        color: $rosa-vermelho;
         font-weight: 500;
 
         @media screen and (max-width: $smartphone) {
@@ -409,7 +410,7 @@
 
     h3 {
         font-size: 1.4em;
-        color: $cor-destaque;
+        color: $rosa-vermelho;
         font-weight: 400;
 
         @media screen and (max-width: $smartphone) {
@@ -420,7 +421,7 @@
     h4 {
         font-size: 1.1em;
         font-weight: 700;
-        color: $cor-destaque;
+        color: $rosa-vermelho;
     }
 
     h5 {
@@ -768,7 +769,7 @@
     .notas {
         font-size: .8em;
         line-height: 1.4;
-        background-color: $cor-fundo-netro;
+        background-color: $cor-fundo-neutro;
         border: 1px solid $cor-texto-padrao;
         border-radius: .5rem;
         padding: 1.2rem;

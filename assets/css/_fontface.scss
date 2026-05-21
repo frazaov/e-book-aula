@@ -1,14 +1,29 @@
 
 @font-face{
-    font-family: "IBM Plex Sans";
-    src: url("../fonts/ibm_plex_sans/ibmplexsans_regular.woff2") format('woff2-variations');
-    font-weight: 100 700;
+    font-family: "Archivo";
+    src: url("../fonts/archivo/Archivo-VariableFont_wdth\,wght.woff2") format('woff2-variations');
+    font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face{
-    font-family: "IBM Plex Sans";
-    src: url("../fonts/ibm_plex_sans/ibmplexsans_italic.woff2") format('woff2-variations');
-    font-weight: 100 700;
+    font-family: "Archivo";
+    src: url("../fonts/archivo/Archivo-Italic-VariableFont_wdth\,wght.woff2") format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
+@font-face{
+    font-family: "Archivo Narrow";
+    src: url("../fonts/archivo_narrow/ArchivoNarrow-VariableFont_wght.woff2") format('woff2-variations');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Archivo Narrow";
+    src: url("../fonts/archivo_narrow/ArchivoNarrow-Italic-VariableFont_wght.woff2") format('woff2-variations');
+    font-weight: 400 700;
     font-style: italic;
 }

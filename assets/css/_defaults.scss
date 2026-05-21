@@ -1,29 +1,43 @@
 //Cores do projeto
-$vermelho: #ed6a5aff;
-$amarelo-clarim: #f4f1bbff;
-$turquesa-claro: #9bc1bcff;
-$azul-ceu: #0c78a3;
-$azul-apagado: #5d576bff;
-$cinzento: rgb(245, 245, 245);
-$quasebranco: rgb(248, 253, 253);
-$preto-roxeado: #1C1725;
+$azul-apagado: #5f36ee;
 
-$cor-fundo-padrao: $quasebranco;
-$cor-texto-padrao: $preto-roxeado;
-$cor-destaque-escuro: $azul-apagado;
-$cor-destaque: $vermelho;
-$cor-destaque-claro: $amarelo-clarim;
+// --- Suas Cores Base (Paleta) ---
+$laranja:           #f0690d;
+$amarelo-clarim:    #f6d152;
+$turquesa-claro:    #0f95e1;
+$azul-ceu:          #074d9e;
+$rosa-vermelho:     #cf0046;
+$purple-vibe:       #5f36ee; // Era o azul-apagado
+$cinzento:          rgb(245, 245, 245);
+$quasebranco:       #ebead4;
+$preto-roxeado:     #3c3c3b;
+
+// --- Nova Atribuição Funcional (O Segredo do Conforto) ---
+$cor-fundo-padrao:    $quasebranco; 
+$cor-texto-padrao:    $preto-roxeado;
+
+// Elementos de Destaque e Leitura
+$cor-titulos:         $azul-ceu;      // Azul escuro dá peso e seriedade para títulos longos
+$cor-links:           $azul-ceu;      // Mantém consistência e passa segurança no clique
+$cor-destaque:        $laranja;       // Use pontualmente (uma tag, um box importante)
+
+// Fundos Alternativos (Boxes de texto, páginas de capítulo)
+$cor-fundo-neutro:    $cinzento;       // Troque o turquesa pelo cinza claro para ler sem cansar
+$cor-fundo-vibrante:  $turquesa-claro; // Guarde o turquesa apenas para páginas inteiras de transição de capítulo (com texto em branco/quasebranco)
+
+
+$cor-destaque-escuro: $azul-ceu;
+$cor-destaque: $laranja;
+$cor-destaque-claro: $quasebranco;
 $cor-links: $azul-ceu;
-$cor-fundo-netro: $cinzento;
-
-
 
 $container: 1020px;
 $tablet: 840px;
 $smartphone: 600px;
 $small: 450px;
 
-$fonte: "IBM Plex Sans", sans-serif;
+$fonte: "Archivo", sans-serif;
+$fonte-titulo: "Archivo Narrow", sans-serif;
 
 :root{
     interpolate-size: allow-keywords;
@@ -86,8 +100,16 @@ button, .button{
 }
 
 
-h1,h2,h3,h4{
+h1,h2{
     text-wrap: pretty;
+    font-family: $fonte-titulo;
+    color: $cor-titulos;
+}
+
+h3,h4{
+    text-wrap: pretty;
+    font-family: $fonte-titulo;
+    color: $rosa-vermelho;
 }
 
 

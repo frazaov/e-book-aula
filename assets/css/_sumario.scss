@@ -3,8 +3,8 @@
 
 
 #header-sumario{
-    background-color: $cor-destaque-claro;
-    color: $cor-destaque-escuro;
+    background-color: $azul-ceu;
+    color: $turquesa-claro;
     padding-block: 2em;
     .container{
         display: flex;
@@ -12,7 +12,7 @@
         align-items: end;
     }
 
-    h1{
+    h1{color: $turquesa-claro;
         font-weight: 300;
         font-size: 3em;
         @media screen and (max-width: $smartphone) {
@@ -22,11 +22,11 @@
 
     }
 
-    h2{
+    h2{color: $turquesa-claro;
         font-size: 1em;
         font-weight: 600;
         text-align: right;
-        span{
+        span{color: $turquesa-claro;
             display: block;
             font-weight: 400;
         }
@@ -105,7 +105,7 @@
             @media screen {
                 &:nth-child(odd){
                     a{
-                        background-color: $cor-fundo-netro;
+                        background-color: $cor-fundo-neutro;
                         &:hover{
                             background-color: $cor-destaque;
                         }

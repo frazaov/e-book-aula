@@ -14,19 +14,26 @@
         padding-block: 2em 5em;
     }
 
-    .titulo-ebook{
-        color: $cor-destaque-claro;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
 
-        font-weight: 500;
-        text-align: center;
-        font-size: 5em;
-        margin-bottom: 3rem;
-        span{
+    .titulo {
+        width: 30vw;
+    }
+
+    .subtitulo-ebook{
             margin-top: 1rem;
             display: block;
-            font-size: .75em;
+            font-size: 1.8em;
             font-weight: 300;
-        }
+            color: $quasebranco;
+            text-align: center;
+
 
         @media screen and (max-width: $tablet) {
             font-size: 3.5em;
@@ -38,17 +45,19 @@
 
     .autoria-capa{
         text-align: center;
-        font-size: 1.25em;
+        margin-top: 20px;
         color: $cor-destaque-claro;
         margin-bottom: 3rem;
 
 
-        dt{
+        dt{ color: $amarelo-clarim;
             font-weight: 700;
+            font-size: 1em;
         }
         
-        dd{
+        dd{ color: $amarelo-clarim;
             font-weight: 400;
+            font-size: 1.15em;
             ul{
                 padding-left: 0;
                 list-style: none;
@@ -71,12 +80,23 @@
             gap: 1rem;
 
         }
-        a{
-            background-color: $cor-destaque-claro;
-            color: $cor-destaque-escuro;
+
+        .sobre {
+            background-color: $rosa-vermelho;
+            color: $quasebranco;
             &:hover{
-                background-color: $cor-destaque;
+                background-color: $turquesa-claro;
             }
+        }
+        .sumarioo { 
+            background-color: $laranja;
+            color: $quasebranco;
+            &:hover{
+                background-color: $turquesa-claro;
+            }
+
+        }
+        a{
         }
     }
 
