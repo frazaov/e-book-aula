@@ -9,7 +9,7 @@ $azul-ceu:          #074d9e;
 $rosa-vermelho:     #cf0046;
 $purple-vibe:       #5f36ee; // Era o azul-apagado
 $cinzento:          rgb(245, 245, 245);
-$quasebranco:       #ebead4;
+$quasebranco:       #fffef0;
 $preto-roxeado:     #3c3c3b;
 
 // --- Nova Atribuição Funcional (O Segredo do Conforto) ---
@@ -110,6 +110,20 @@ h3,h4{
     text-wrap: pretty;
     font-family: $fonte-titulo;
     color: $rosa-vermelho;
+}
+
+i {
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 0.8em;
+    padding: 0.1em;
+    //margin: 0px 10px;
+
+    * {
+        font-size: inherit; // Força o ícone a obedecer o tamanho do pai
+        width: auto;
+        height: auto;
+    }
 }
 
 

@@ -11,12 +11,12 @@
 #header-titulo-livro {
     background-color: $cor-destaque-escuro;
     padding-block: .5em;
-    color: $turquesa-claro;
+    color: $quasebranco;
 
     h2 {
         font-size: 1em;
         font-weight: 700;
-        color: $turquesa-claro;
+        color: $quasebranco;
 
         span {
             display: block;
@@ -197,9 +197,9 @@
             aside {
                 font-size: .9em;
                 line-height: 1.4;
-                border: 1px solid $cor-destaque;
-                padding: 1.5rem;
-                border-radius: .5rem;
+                //border: 1px solid $cor-destaque;
+                //padding: 1.5rem;
+                //border-radius: .5rem;
 
                 &>*:not(:last-child) {
                     margin-bottom: 1.25em;
@@ -331,6 +331,7 @@
 
 
 
+
             // DEBUGGING 
             * .folio {
                 display: inline-block;
@@ -360,17 +361,87 @@
                 margin-bottom: 0;
             }
 
+            span {
+                font-size: .7em;
+                font-weight: 400;
+            }
+
             @media screen and (max-width: $smartphone) {
                 font-size: 2.25em;
             }
         }
 
+
         .tagline-h1{
             color: $cor-destaque-escuro;
-            font-size: 1.25em;
-            font-weight: 350;
-            margin-bottom: 2rem;
+            font-size: 1em;
+            font-weight: 500;
         }
+
+            .epigrafe { text-align: right;
+                background-color: $rosa-vermelho;
+                color: $cor-fundo-padrao;
+                border: 1px solid $rosa-vermelho;
+                border-radius: .5rem;
+                padding:1.5rem;
+
+                h4 { color: $cor-fundo-padrao;
+                    font-size: 1em;
+                    font-weight: 500;
+                    margin-bottom: 1em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: .5em;
+
+                    i { font-size: 1.5em;
+                        background-color: $cor-fundo-padrao;
+                        color: $rosa-vermelho;
+                    }
+                    
+                }
+
+                p {
+                font-weight: 600;
+                font-size: 1.1em;
+                }
+                
+            }
+
+             .paradas{
+                background-color: $laranja;
+                color: $cor-fundo-padrao;
+                border: 1px solid $laranja;
+                border-radius: .5rem;
+                padding:1.5rem;
+
+                h4 { color: $cor-fundo-padrao;
+                    font-size: 1em;
+                    font-weight: 500;
+                    margin-bottom: 1em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: .5em;
+
+                    i { font-size: 1.5em;
+                        background-color: $cor-fundo-padrao;
+                        color: $laranja;
+                    }
+                    
+                }
+
+                ul { list-style: none;
+                    padding-left: 0;
+                    li {font-weight: 500;
+                        font-size: 0.9em;
+                        border-bottom: 1px dashed $cor-fundo-padrao;
+                    }
+                }
+            }
+
 
     }
 
@@ -492,6 +563,7 @@
         font-size: .9em;
         font-weight: 450;
     }
+
 
     .container-table {
         overflow-x: auto;

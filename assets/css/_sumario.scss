@@ -4,7 +4,7 @@
 
 #header-sumario{
     background-color: $azul-ceu;
-    color: $turquesa-claro;
+    color: $quasebranco;
     padding-block: 2em;
     .container{
         display: flex;
@@ -12,7 +12,7 @@
         align-items: end;
     }
 
-    h1{color: $turquesa-claro;
+    h1{color: $quasebranco;
         font-weight: 300;
         font-size: 3em;
         @media screen and (max-width: $smartphone) {
@@ -22,11 +22,11 @@
 
     }
 
-    h2{color: $turquesa-claro;
+    h2{color: $quasebranco;
         font-size: 1em;
         font-weight: 600;
         text-align: right;
-        span{color: $turquesa-claro;
+        span{color: $quasebranco;
             display: block;
             font-weight: 400;
         }
