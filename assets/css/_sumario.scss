@@ -67,28 +67,121 @@
     }
 
 
-    ul{
+   ul {
         list-style: none;
         padding-left: 0;
-        li{
-            a{
+
+        li {
+            // Estilos para o item que tem o accordion
+            &.has-submenu {
+                summary {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-block: 1.5em;
+                    padding-inline: 1rem;
+                    cursor: pointer;
+                    color: $cor-destaque-escuro;
+                    transition: all 0.1s linear;
+                    list-style: none; // Esconde a setinha padrão do navegador
+
+                    &::-webkit-details-marker {
+                        display: none; // Esconde a setinha no Safari/Chrome antigo
+                    }
+
+                    &:hover {
+                        color: $cor-destaque-claro;
+                        background-color: $cor-destaque;
+                    }
+
+                    .titulo-capitulo {
+                        span {
+                            display: block;
+                            &:first-child, &:only-child {
+                                font-size: 1.4em;
+                                font-weight: 500;
+                                line-height: 1.2;
+                                margin-bottom: 0.5rem;
+                            }
+                            &:nth-child(2) {
+                                font-size: 1em;
+                                font-weight: 350;
+                                line-height: 1.2;
+                            }
+                        }
+                    }
+
+                    .folio {
+                        font-weight: 400;
+                        font-size: 1.2em;
+                    }
+                }
+
+                // Quando o menu estiver aberto, mantém o fundo cinza/destaque se desejar
+                details[open] summary {
+                    border-bottom: 1px solid $laranja; // Linha de separação para destacar o item aberto
+                }
+            }
+
+            // Estilização dos subtópicos recolhíveis
+            .submenu {
+                //background-color: rgba(0, 0, 0, 0.02); // Um fundo sutilmente diferente para o submenu
+                padding-bottom: 1em;
+
+                .sub-link {
+                    display: block;
+                    padding: 0.8em 1rem 0.8em 2.5rem; // Empurra o texto para a direita (identação)
+                    font-size: 1em;
+                    font-weight: 400;
+                    color: $cor-destaque-escuro;
+                    border-left: 3px solid transparent;
+
+                    &:hover {
+                        border-left-color: $cor-destaque;
+                        background-color: rgba(0, 0, 0, 0.04);
+                        color: $cor-destaque-escuro; // Evita que mude para a cor clara do hover principal
+                    }
+
+                    // Se for a opção de "Ir para o capítulo"
+                    &.principal {
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+
+                    // Identação extra para níveis mais profundos (Ex: Cartas)
+                    &.sub-item {
+                        padding-left: 4rem;
+                        font-size: 0.95em;
+                        opacity: 0.9;
+                    }
+
+                    // Identação para as fichas/objetivos
+                    &.sub-sub-item {
+                        padding-left: 5.5rem;
+                        font-size: 0.9em;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            // Seu estilo antigo dos links normais dos outros capítulos
+            a {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding-block: 1.5em;
                 padding-inline: 1rem;
-                
 
-                .titulo-capitulo{
-                    span{
+                .titulo-capitulo {
+                    span {
                         display: block;
-                        &:first-child, *:only-child{
+                        &:first-child, &:only-child {
                             font-size: 1.4em;
                             font-weight: 500;
                             line-height: 1.2;
                             margin-bottom: 0.5rem;
                         }
-                        &:nth-child(2){
+                        &:nth-child(2) {
                             font-size: 1em;
                             font-weight: 350;
                             line-height: 1.2;
@@ -96,17 +189,18 @@
                     }
                 }
 
-                .folio{
+                .folio {
                     font-weight: 400;
                     font-size: 1.2em;
                 }
             }
 
+            // Zebra (linhas ímpares com cor de fundo diferente)
             @media screen {
-                &:nth-child(odd){
-                    a{
+                &:nth-child(odd) {
+                    > a, > details > summary {
                         background-color: $cor-fundo-neutro;
-                        &:hover{
+                        &:hover {
                             background-color: $cor-destaque;
                         }
                     }

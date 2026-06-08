@@ -113,7 +113,7 @@
 
 
 #main-pretextuais{
-    padding-block: 6em;
+    //padding-block: 6em;
 
     .texto-copyright{
         text-align: center;
@@ -128,18 +128,22 @@
         display: flex;
         align-items: center;
         gap: 2rem;
-        margin-bottom: 4em;
-        img{
-            height: 4em;
+        margin-top: 4em;
+
+        p {margin-bottom: 15px;}
+
+        img {
+            height: 5em;
         }
-        @media screen and (max-width: $smartphone) {
+
+         @media screen and (max-width: $smartphone) {
             flex-direction: column;
         }
 
     }
 
     .ficha-tecnica{
-        columns: 1;
+        columns: 2;
         //column-gap: 2em;
         text-align: center;
         margin: 140px 0px;
@@ -202,6 +206,66 @@
             gap: 1rem;
 
         }
+    }
+
+    .autores {
+        background-color: $laranja;
+        padding-block: 4em;
+        margin-top:4em;
+
+        
+        .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem
+
+        }
+
+        h1 {margin-bottom: 2em;
+        text-align: center;}
+
+        .autor {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2em;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            h2 { //text-align: center;
+                font-weight: 500;
+                color: $quasebranco;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                color: $quasebranco;
+            }
+        }
+    }
+
+    .descricao-tecnica {background-color: $amarelo-clarim;
+        padding-block: 4em;
+
+        h1{
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        p{
+            margin-inline: auto;
+        }
+
+         a {
+            color: $turquesa-claro;
+         }
+
     }
 }
 

@@ -398,6 +398,18 @@
                     i { font-size: 1.5em;
                         background-color: $cor-fundo-padrao;
                         color: $rosa-vermelho;
+                        aspect-ratio: 1 / 1; 
+                        overflow: hidden;
+                        border-radius: 0.8em;
+                        padding: 0.1em;
+                        //margin: 0px 10px;
+
+                        * {
+                            font-size: inherit; // Força o ícone a obedecer o tamanho do pai
+                            width: auto;
+                            height: auto;
+                        }
+                    
                     }
                     
                 }
@@ -429,6 +441,17 @@
                     i { font-size: 1.5em;
                         background-color: $cor-fundo-padrao;
                         color: $laranja;
+                        aspect-ratio: 1 / 1; 
+                        overflow: hidden;
+                        border-radius: 0.8em;
+                        padding: 0.1em;
+                        //margin: 0px 10px;
+
+                        * {
+                            font-size: inherit; // Força o ícone a obedecer o tamanho do pai
+                            width: auto;
+                            height: auto;
+                        }
                     }
                     
                 }
