@@ -131,7 +131,7 @@
                 .sub-link {
                     display: block;
                     padding: 0.8em 1rem 0.8em 2.5rem; // Empurra o texto para a direita (identação)
-                    font-size: 1em;
+                    font-size: 1.1em;
                     font-weight: 400;
                     color: $cor-destaque-escuro;
                     border-left: 3px solid transparent;
@@ -141,6 +141,12 @@
                         background-color: rgba(0, 0, 0, 0.04);
                         color: $cor-destaque-escuro; // Evita que mude para a cor clara do hover principal
                     }
+
+                    span {
+                        font-weight: 700;
+                        font-size: 0.6em;
+                    }
+                    
 
                     // Se for a opção de "Ir para o capítulo"
                     &.principal {
