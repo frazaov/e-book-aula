@@ -145,11 +145,35 @@
         position: relative;
         padding-block-end: 4em;
         display: grid;
-        grid-template-columns: auto 660px 360px auto;
+        grid-template-columns: auto 680px 340px auto;
         align-items: start;
         gap: 2rem 0rem;
         font-size: 1em;
         line-height: 1.6em;
+        background-image: url('/assets/media/pattern.jpg'); 
+    background-repeat: repeat;
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: #ffffff;
+            box-shadow: inset 0 0 0 1px #dddddd;
+            z-index: 0; // Fica atrás do texto
+
+            // Faz o bloco branco ocupar exatamente a 2ª coluna do grid (a de 660px / 560px)
+            grid-column: 2 / 3;
+            width: 100%;
+        }
+
+        // 3. Garante que os textos e elementos fiquem por cima do fundo branco
+        > * {
+            position: relative;
+            z-index: 1;
+            padding: 0px 25px;
+        }
 
         @media screen and (max-width: $container) {
             grid-template-columns: auto 560px 280px auto;
@@ -185,7 +209,7 @@
             aside,
             .lateral {
                 grid-column-start: 3;
-                margin-left: 1rem;
+                //margin-left: 1rem;
 
                 @media screen and (max-width: $tablet) {
                     grid-column-start: 2;
@@ -203,6 +227,32 @@
 
                 &>*:not(:last-child) {
                     margin-bottom: 1.25em;
+                }
+
+                // 1. ILUSTRAÇÃO SUPERIOR (Acima do aside)
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 300px; 
+                    background-image: url('/assets/media/quina2.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left bottom;
+                    margin-bottom: .5rem; 
+                }
+
+                // 2. ILUSTRAÇÃO INFERIOR (Abaixo do aside)
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 300px; // Ajuste para a altura da sua ilustração
+                    background-image: url('/assets/media/quina.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                    margin-top: .5rem; 
                 }
             }
 
@@ -226,7 +276,7 @@
             }
 
             h1 {
-                @extend .maior;
+                //@extend .maior;
             }
 
             .container-table {
@@ -379,9 +429,10 @@
         }
 
             .epigrafe { text-align: right;
-                background-color: $rosa-vermelho;
+                background-color: $azul-ceu;
                 color: $cor-fundo-padrao;
-                border: 1px solid $rosa-vermelho;
+                box-shadow: inset 0 0 0 1px #dddddd;
+                //border: 1px solid $azul-ceu;
                 border-radius: .5rem;
                 padding:1.5rem;
 
@@ -397,7 +448,7 @@
 
                     i { font-size: 1.5em;
                         background-color: $cor-fundo-padrao;
-                        color: $rosa-vermelho;
+                        color: $laranja;
                         aspect-ratio: 1 / 1; 
                         overflow: hidden;
                         border-radius: 0.8em;
@@ -422,9 +473,10 @@
             }
 
              .paradas{
-                background-color: $laranja;
+                background-color: $azul-ceu;
                 color: $cor-fundo-padrao;
-                border: 1px solid $laranja;
+                text-align: right;
+                box-shadow: inset 0 0 0 1px #dddddd;
                 border-radius: .5rem;
                 padding:1.5rem;
 
@@ -555,7 +607,7 @@
 
 
     ul,
-    ol {
+    ol { margin-left: 20px;
 
         &>li {
             &::marker {
