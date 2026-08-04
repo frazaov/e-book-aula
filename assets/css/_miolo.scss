@@ -150,7 +150,9 @@
         gap: 2rem 0rem;
         font-size: 1em;
         line-height: 1.6em;
-        background-image: url('/assets/media/pattern.jpg'); 
+        background-image: url('/assets/media/pattern.png');
+        background-attachment: fixed;
+        background-size: 150px;
     background-repeat: repeat;
 
 

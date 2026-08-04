@@ -27,3 +27,17 @@
     font-weight: 400 700;
     font-style: italic;
 }
+
+@font-face{
+    font-family: "Noto Serif";
+    src: url("../fonts/noto_serif/NotoSerif-VariableFont_wdth,wght.woff2") format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Noto Serif";
+    src: url("../fonts/noto_serif/NotoSerif-Italic-VariableFont_wdth,wght.woff2") format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
