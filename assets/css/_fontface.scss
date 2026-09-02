@@ -41,3 +41,17 @@
     font-weight: 100 900;
     font-style: italic;
 }
+
+@font-face{
+    font-family: "Fraunces";
+    src: url("../fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2") format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Fraunces";
+    src: url("../fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.woff2") format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+}
