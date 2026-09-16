@@ -23,7 +23,17 @@
     }
 
     .titulo {
-        width: 30vw;
+        font-size: 3.5em;
+        font-weight: 700;
+        color: $quasebranco;
+        text-align: center;
+
+        @media screen and (max-width: $tablet) {
+            font-size: 3.5em;
+        }
+        @media screen and (max-width: $smartphone) {
+            font-size: 2.5em;
+        }
     }
 
     .subtitulo-ebook{
@@ -254,6 +264,37 @@
         padding-block: 4em;
 
         h1{
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        p{
+            margin-inline: auto;
+        }
+
+         a {
+            color: $turquesa-claro;
+         }
+
+    }
+
+    .contracapa {
+        text-align: center;
+        margin-block-start: 5em;
+
+        p { color: $azul-ceu;
+         margin-bottom: 1em;}
+
+         h1 {
+            margin: 4em 0;
+         }
+    }
+
+     .dedicatoria {background-color: $rosa-vermelho;
+        padding-block: 4em;
+        color: $quasebranco;
+
+        h1{ color: $quasebranco;
             text-align: center;
             margin-bottom: 2em;
         }
