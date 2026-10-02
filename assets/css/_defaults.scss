@@ -36,8 +36,8 @@ $tablet: 840px;
 $smartphone: 600px;
 $small: 450px;
 
-$fonte: "Fraunces", sans-serif;
-$fonte-titulo: "Fraunces", sans-serif;
+$fonte: "Archivo", sans-serif;
+$fonte-titulo: "DynaPuff", sans-serif;
 
 :root{
     interpolate-size: allow-keywords;
@@ -59,9 +59,10 @@ body{
     font-size: 18px;
     line-height: 1.5;
     font-family: $fonte;
-    background-color: $cor-fundo-padrao;
+    //background-color: $cor-fundo-padrao;
     color: $cor-texto-padrao;
     scroll-behavior: smooth;
+    
 
     @media screen and (max-width: 1000px) {
         font-size: 17px;

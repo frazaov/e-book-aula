@@ -55,3 +55,14 @@
     font-weight: 100 900;
     font-style: italic;
 }
+
+
+@font-face {
+  font-family: "DynaPuff";
+  src: url('../fonts/dynaPuff/DynaPuff-VF.woff2') format('woff2-variations');
+  font-style: normal;
+  font-weight: 400 700;
+  font-stretch: 75% 100%;
+  font-display: swap;
+  
+}

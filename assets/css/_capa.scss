@@ -1,11 +1,13 @@
 @use "defaults" as *;
 
 #capa-ebook{
-    min-height: calc(100vh - 4em);
+    min-height: calc(100vh - 2em);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $cor-destaque-escuro;
+    background-image: url("../media/capa.jpg");
+    background-size: cover;
+    background-position: center;
     padding-block: 4em 8em;
     position: relative;
 
@@ -19,11 +21,18 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
+        gap: 0px;
+        background-color: $azul-ceu;
+        max-width: 550px;
+        border-radius: 10px;
+        padding: 2em;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
     }
 
     .titulo {
-        font-size: 3.5em;
+        font-size: 3em;
+        line-height: 1.1;
         font-weight: 700;
         color: $quasebranco;
         text-align: center;
@@ -37,35 +46,33 @@
     }
 
     .subtitulo-ebook{
-            margin-top: 1rem;
+            margin-top: .7rem;
             display: block;
-            font-size: 1.8em;
+            font-size: 1.4em;
             font-weight: 300;
             color: $quasebranco;
             text-align: center;
 
 
-        @media screen and (max-width: $tablet) {
-            font-size: 3.5em;
-        }
         @media screen and (max-width: $smartphone) {
             font-size: 2.5em;
         }
     }
 
     .autoria-capa{
+        font-family: $fonte-titulo;
         text-align: center;
         margin-top: 20px;
-        color: $cor-destaque-claro;
-        margin-bottom: 3rem;
+        color: $quasebranco;
+        margin-bottom: 2rem;
 
 
-        dt{ color: $amarelo-clarim;
-            font-weight: 700;
+        dt{ 
+            font-weight: 600;
             font-size: 1em;
         }
         
-        dd{ color: $amarelo-clarim;
+        dd{ 
             font-weight: 400;
             font-size: 1.15em;
             ul{
